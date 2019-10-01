@@ -11,8 +11,11 @@ body {
 
 .header {
     position: relative;
-    background-image: url("images/main2.jpg"); 
-    height: 660px;
+    /*background-image: url("images/main2.jpg");
+    background-size: cover;
+    background-attachment: fixed;*/
+    min-height: 660px;
+    background: transparent;
 }
 
 #aboutme {
@@ -112,9 +115,10 @@ body {
 /*================================= SKILLS =========================================*/
 #Skills {
     background-image: url("images/officeimage1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     position: absolute;
     margin-top: 706px;
-    /*background-color: lightseagreen;*/
     height: 1000px;
     width: 100%;
     padding-top: 55px;
