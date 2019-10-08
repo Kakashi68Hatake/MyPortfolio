@@ -20,7 +20,7 @@ $(document).ready(function() {
         $(".skillset2").hide(800);
         $(".skillset1").hide(1000);
         $('.inbar div').hide();
-      } 
+      }
     });
   });
   

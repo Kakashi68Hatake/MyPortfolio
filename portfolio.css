@@ -10,12 +10,18 @@ body {
 /*========================== HEADER BLOCK ======================================================*/
 
 .header {
-    position: relative;
-    /*background-image: url("images/main2.jpg");
-    background-size: cover;
-    background-attachment: fixed;*/
     min-height: 660px;
     background: transparent;
+}
+
+.header #navbar #logo {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.header #navbar #logo img {
+    width: 80px;
+    height: 80px;
 }
 
 #aboutme {
@@ -23,17 +29,23 @@ body {
     text-align: center;
     color: whitesmoke;
     font-size: 20px;
-    position: absolute;
-    top: 35%;
-    left: 35%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 200px;
     padding: 15px 20px;
-    width: 400px;
+    max-width: 400px;
+}
+
+#aboutme p {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    word-spacing: 5px;
 }
 
 #navbar {
     background-color: rgba(35, 34, 36, 0.8);
     position: fixed;
-    height: 80px;
     width: 100%;
     z-index: 1;
 }
@@ -67,24 +79,38 @@ body {
 
 #About {
     padding-top: 55px;
-    position: absolute;
-    background-color: rgb(254, 255, 218);
-    height: 650px;
-    width: 100%;
+    /*background-color:#fffdd0;*/
+    background: url("images/aboutb1.jpg");
+    min-height: 650px;
+    /*width: 100%;*/
+}
+
+#About .myphoto {
+    display: inline-block;
+    background-color: rgba(0, 218, 127, 0.5);
+    width: 32%;
+    padding-bottom: 5%;
+    padding-top: 10px;
+    /*height: 500px;*/
 }
 
 #introduce .intro {
     display: inline-block;
-    /*background-color: #A0A0A0;*/
+    margin-left: 10px;
+    padding-right: 10px;
     color: white;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: verdana;
     height: 325px;
     width: 330px;
     float: left;
     line-height: 25px;
     text-align: left;
+}
+
+#introduce .introfirst {
+    border-right: 2px solid white;
 }
 
 #About h1 {
@@ -94,13 +120,14 @@ body {
 }
 
 #About img {
+    max-height: 350px;
     border-radius: 50%;
     margin-left: 50px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 #introduce {
-    background-color: rgb(72, 72, 245);
+    background-color: dodgerblue;
     height: 400px;
     width: 705px;
     float: right;
@@ -110,6 +137,7 @@ body {
     text-align: center;
     font-family: verdana;
     color: white;
+    display: inline-block;
 }
 
 /*================================= SKILLS =========================================*/
@@ -117,9 +145,7 @@ body {
     background-image: url("images/officeimage1.jpg");
     background-size: cover;
     background-attachment: fixed;
-    position: absolute;
-    margin-top: 706px;
-    height: 1000px;
+    min-height: 950px;
     width: 100%;
     padding-top: 55px;
 }
@@ -144,6 +170,8 @@ body {
     color: white;
     text-align: center;
     font-family: verdana;
+    line-height: 100%;
+    font-size: 18px;
     height: 240px;
     width: 450px;
     margin: 15px auto;
@@ -152,13 +180,12 @@ body {
 
 .skillset2 {
     display: inline-block;
-    height: 350px;
+    height: 420px;
     width: 550px;
     margin-left: 10px;
     margin-right: 55px;
     margin-top: 100px;
-    float: right;
-    
+    float: right;    
 }
 
 .outbar {
@@ -180,7 +207,7 @@ body {
 .inbar {
     position: absolute; 
     display: inline-block; 
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(155, 211, 248, 0.8); 
     height: 10px; 
     top: 25px; 
     left: 10px; 
@@ -190,37 +217,53 @@ body {
 
 .inbar div {
     position: absolute; 
-    background-color: rgb(59, 102, 243); 
+    background-color: rgba(255, 238, 86, 0.8); 
     height: 10px; 
-    /*width: 300px;*/ 
     top: 0px; 
     left: 0px;
 }
 
-.hacker {
+.outbar span {
     position: relative;
+    display: inline-block;
+    float: right;
+    color: white;
+    top: -20px;
+    right: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hacker {
     background-color: white;
     height: 85px;
+    text-align: center;
     width: 100%;
-    /*top: 30%;*/
-    /*text-align: center;*/
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .hacker div {
-    position: absolute;
-    margin-left: 500px;
+    display: inline-block;
     padding: 10px;
+    z-index: 1;
 }
 
 .iconify {
     padding: 10px;
     width: 2.5em;
     height: 2.5em;
-    margin-right: 100px;
     border: 3px solid royalblue;
-    /*background-color: royalblue;*/
     color: royalblue;
     border-radius: 1em;
+}
+
+.iconify:first-child {
+    margin-right: 50px;
+}
+
+.iconify:last-child {
+    margin-left: 50px;
 }
 
 .iconify:hover {
@@ -233,11 +276,8 @@ body {
 /*============================= CONTACT ===============================================*/
 
 #form {
-    position: relative;
-    margin-top: 1611px;
     background-image: url("images/form5.jpg");
     height: 750px;
-    width: 100%;
     padding-top: 55px;
     text-align: center;
 }
@@ -254,7 +294,7 @@ body {
     color: white;
     height: 450px;
     width: 700px;
-    margin-left: 330px;
+    margin: auto;
     text-align: center;
     padding: 3px;
     outline: 1.5px solid white;
@@ -321,23 +361,20 @@ body {
 
 #form #socicons {
     background-color: rgba(116, 110, 110, 0.7);
-    height: 55px;
-    width: 600px;
-    margin-top: 30px;
-    margin-left: 375px;
+    min-height: 55px;
+    width: 50%;
+    margin: 30px auto;
     background-color: none;
-    /*border: 1.5px solid royalblue;*/
-    padding: 5px;
 }
 
 #socicons .iconify {
     height: 50px;
     width: 50px;
     padding: 0%;
-
     color: white;
     border: 2px solid white;
-    margin-right: 25px;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 #socicons .iconify:hover {
@@ -350,7 +387,6 @@ body {
 /*================================== FOOTER ================================*/
 
 #footer {
-    position: relative;
     height: 200px;
     width: 100%;
     background-color: #202020;
@@ -364,7 +400,5 @@ body {
 /*******************************************************************************************/
 /****************************** ANIMATION STARTS**********************************************************/
 
-.animatenav {
-    background-color: rgba(116, 85, 253, 0.8);
-    transition: 1s;
-}
+
+/********************************************************************************************/
